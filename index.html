@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Pokémon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Buscador de Pokémon</h1>
+        <p class="description">¡Encuentra tu Pokémon favorito fácilmente! Solo ingresa el nombre o ID del Pokémon y explora su información.</p>
+        
+        <div class="input-container">
+            <input type="text" id="pokemonInput" placeholder="Introduce el nombre o ID de Pokémon">
+            <button id="searchButton">Buscar</button>
+        </div>
+
+        <!-- Imágenes laterales -->
+        <div class="side-images">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt="Pikachu" class="side-image left-side">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png" alt="Charmander" class="side-image right-side">
+        </div>
+
+        <!-- Información del Pokémon -->
+        <div id="pokemonData" class="card hidden">
+            <h2 id="pokemonName"></h2>
+            <img id="pokemonImage" alt="Imagen del Pokémon" class="fade-in">
+            <p><strong>ID:</strong> <span id="pokemonID"></span></p>
+            <p><strong>Tipo:</strong> <span id="pokemonType"></span></p>
+        </div>
+
+        <div id="errorMessage" class="error hidden">
+            <p>No se encontró el Pokémon, ¡intenta de nuevo!</p>
+        </div>
+
+        <!-- Información adicional -->
+        <div class="extra-info">
+            <h3>Pokémon</h3>
+            <p><strong>Artículo</strong>: Discusión | Leer | Ver código fuente | Ver historial</p>
+            <p><strong>Apariencia</strong>: Automático | Claro | Oscuro</p>
+            <p>Pokémon (ポケモン Pokémon) es una franquicia de medios que comenzó como un videojuego RPG, pero debido a su popularidad, se expandió a otros medios como series de televisión, películas y juegos de cartas. Actualmente, Pokémon es una de las franquicias más exitosas a nivel mundial, con más de 500 millones de unidades vendidas.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

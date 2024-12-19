@@ -1,0 +1,192 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #4caf50, #8bc34a);
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.description {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Input and Button Styling */
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 70%;
+    padding: 12px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #FF5722;
+    outline: none;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #FF5722;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #FF3D00;
+}
+
+/* Card for displaying Pokémon data */
+.card {
+    margin-top: 20px;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    width: 100%;
+    opacity: 0;
+    animation: showCard 1s forwards;
+}
+
+.card h2 {
+    font-size: 1.6rem;
+    color: #333;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    margin-top: 15px;
+    transition: transform 0.3s ease;
+    opacity: 0;
+    animation: slideUp 0.8s forwards;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+p {
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
+
+/* Error Message */
+.error {
+    margin-top: 20px;
+    color: #FF5722;
+    font-size: 1.2rem;
+    display: none;
+}
+
+/* Extra Information */
+.extra-info {
+    margin-top: 30px;
+    font-size: 1rem;
+    color: #444;
+    text-align: left;
+}
+
+.extra-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.extra-info p {
+    margin: 5px 0;
+}
+
+/* Side Images */
+.side-images {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.side-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.side-image:hover {
+    transform: scale(1.1);
+}
+
+/* Hidden elements */
+.hidden {
+    display: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes showCard {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
